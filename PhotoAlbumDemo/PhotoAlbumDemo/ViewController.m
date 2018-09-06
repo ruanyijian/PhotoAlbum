@@ -69,13 +69,17 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
 {
+//    获取图片
     UIImage *image = info[UIImagePickerControllerOriginalImage];
     self.image.image = image;
+//    获取图片后返回
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
+//按取消按钮时候的功能
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
+//    返回
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
 
